@@ -1,0 +1,69 @@
+﻿@model POCChatGPTCore.Models.RequestModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+*@
+<div class="needs-validation" novalidate>
+
+    <form class="form-row" asp-controller="Home" asp-action="Index" method="post">
+        <label class="text-black" for="textAreaExample6">Eneter your serach context </label>
+
+        <div class="input-group">
+            <input type="text" class="form-control" name="prompt" placeholder="Search Text" value="@Model.Prompt" required autocomplete="off">
+            <div class="input-group-btn">
+                <button class="btn btn-primary " type="submit">
+                    <i class="fa fa-search" aria-hidden="true"> </i> Search
+                </button>
+
+            </div>
+
+        </div>
+        <div class="col-md-12 mb-3">
+
+            <p class="text-black-50 fst-italic " for="textAreaExample6">Example: Write a invitation mail for Townhall on June-2023 Subject: TechSkillUpgrade </p>
+
+        </div>
+
+        <div class="col-md-12 mb-3">
+            <label class="text-black" for="textAreaExample6">Result</label>
+
+            
+            <a href="@Url.Action("Index","Home")" class="btn btn-danger pull-right"><i class="fa fa-trash-o" aria-hidden="true"> </i> Clear Result </a>
+      @*      <button class="btn btn-danger pull-right" type="submit" >
+                <i class="fa fa-trash-o" aria-hidden="true"> </i> Clear Result
+            </button>*@
+
+            <div class="form-outline mb-4">
+                <textarea class="form-control disabled" name="output" rows="15" readonly="readonly">@Model.output</textarea>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
