@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using POCChatGPTCore.Models;
 using RestSharp;
@@ -12,10 +14,12 @@ namespace POCChatGPTCore.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IConfiguration _configuration;
+        private string _apiKey = String.Empty;
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -30,10 +34,11 @@ namespace POCChatGPTCore.Controllers
             {
                 MaxTimeout = -1,
             };
+            _apiKey = _configuration.GetValue<string>("OpenAIKey") ?? String.Empty;
             var client = new RestClient(options);
             var request = new RestRequest("https://api.openai.com/v1/completions", Method.Post);
             request.AddHeader("Content-Type", "application/json");
-            request.AddHeader("Authorization", "Bearer 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");
+            request.AddHeader("Authorization", $"Bearer {_apiKey}");
             var body = new TextDavinci003Model()
             {
                 Model = "text-davinci-003",
@@ -62,8 +67,8 @@ namespace POCChatGPTCore.Controllers
                 }
                 return View(model);
             }
-
-            return View(new TextDavinci003Model());
+            _logger.LogError(JsonConvert.SerializeObject(response.Content));
+            return View(new RequestModel());
         }
         public IActionResult Privacy()
         {
