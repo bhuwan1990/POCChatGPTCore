@@ -1,36 +1,32 @@
-# Ask Me API
+write an README.md file for Ask Me app using c# mvc core
 
-Ask Me API is a natural language processing system for answering any question, built using C# and ASP.NET Core MVC. It uses advanced AI algorithms to understand user input and respond with relevant answers.
+# Ask Me
+
+Ask Me is a web application built with C# MVC Core that allows users to post questions and answers. 
+
+## Features
+
+* Post questions and answers 
+* Upvote and downvote questions and answers 
+* Search questions 
+* Profile page
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+To get started with Ask Me, download the source code from GitHub and open the solution file in Visual Studio. Then, run the application and follow the instructions to set up your account. 
 
-### Prerequisites
+## Prerequisites
 
-The Ask Me API requires the following:
+To run Ask Me, you will need the following: 
 
-* .NET Core 6.0
-* Visual Studio 2012
+* Visual Studio 
+* .NET Core 3.1 
 
-### Installing
+## Installing
 
-Clone this repository to your local machine:
-
-```
-$ git clone https://github.com/bhuwan1990/POCChatGPTCore.git
-```
-
-Open the solution file in Visual Studio and build the project.
-
-### Running the API
-
-To run the API, press the "Run" button in Visual Studio. The API will now be running on localhost at port 5000.
-
-## Using the API
-
-Once the API is running, you can use it to answer any question. Simply make a POST request to the API endpoint with your question as the body of the request.
+Once you have downloaded the source code and opened the solution file in Visual Studio, you can run the application to set up your account. 
 
 ## Contributing
 
-If you would like to contribute to this project, please feel free to submit a pull request.
+If you would like to contribute to Ask Me, please create a pull request on GitHub. 
+
