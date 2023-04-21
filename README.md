@@ -6,10 +6,9 @@ Ask Me is a web application built with C# MVC Core that allows users to post que
 
 ## Features
 
-* Post questions and answers 
-* Upvote and downvote questions and answers 
+
 * Search questions 
-* Profile page
+* Generate code
 
 ## Getting Started
 
