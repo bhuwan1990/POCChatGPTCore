@@ -1,4 +1,4 @@
-write an README.md file for Ask Me app using c# mvc core
+
 
 # Ask Me
 
