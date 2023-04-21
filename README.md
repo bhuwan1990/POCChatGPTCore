@@ -18,7 +18,7 @@ The Ask Me API requires the following:
 Clone this repository to your local machine:
 
 ```
-$ git clone https://github.com/USERNAME/askme-api.git
+$ git clone https://github.com/bhuwan1990/POCChatGPTCore.git
 ```
 
 Open the solution file in Visual Studio and build the project.
