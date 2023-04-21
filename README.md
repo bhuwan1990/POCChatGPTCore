@@ -18,8 +18,8 @@ To get started with Ask Me, download the source code from GitHub and open the so
 
 To run Ask Me, you will need the following: 
 
-* Visual Studio 
-* .NET Core 3.1 
+* Visual Studio 2022
+* .NET Core 6.0
 
 ## Installing
 
