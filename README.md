@@ -2,13 +2,13 @@
 
 # Ask Me
 
-Ask Me is a web application built with C# MVC Core that allows users to post questions and get answers. 
+Ask Me is a web application built with C# MVC Core that allows users to post questions and get answers.
 
 ## Features
 
 
 * Search questions 
-* Generate code any laguage
+* Generate script for any language like any 
 
 ## Getting Started
 
@@ -21,6 +21,7 @@ To run Ask Me, you will need the following:
 * Visual Studio 2022
 * .NET Core 6.0
 
+Note: Application consumes chat GPT API which API Key need to be set appsettings.json file. Replace youe OpenAIKey to run this.
 ## Installing
 
 Once you have downloaded the source code and opened the solution file in Visual Studio, you can run the application to set up your account. 
